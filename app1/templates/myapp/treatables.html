@@ -19,7 +19,12 @@
             <th>Account Number</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>customer_id</th>
+            <th>Customer ID</th>
+            <th>Pending Reason</th>
+            <th>Third Party Verification</th>
+            <th>FICO</th>
+            <th>LMI Status</th>
+            <th>Account Verified</th>
         </tr>
         {% for customer in data %}
         <tr>
@@ -28,6 +33,11 @@
             <td>{{ customer.first_name }}</td>
             <td>{{ customer.last_name }}</td>
             <td>{{ customer.customer_id }}</td>
+            <td>{{ customer.pending_reason }}</td>
+            <td>{{ customer.third_party_verification }}</td>
+            <td>{{ customer.fico }}</td>
+            <td>{{ customer.lmi_status }}</td>
+            <td>{{ customer.account_verified }}</td>
 
         </tr>
         {% empty %}
