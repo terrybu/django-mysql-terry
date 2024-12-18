@@ -8,28 +8,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Customer List</title>
+    <title>Treatables</title>
 </head>
 <body>
-    <h1>Master Customer List</h1>
+    <h1>Treatables</h1>
     
     <table>
         <tr>
-            <th>msql_id</th>
+            <th>market</th>
             <th>Account Number</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Email</th>
-            <th>Current Farm ID</th>
+            <th>customer_id</th>
         </tr>
         {% for customer in data %}
         <tr>
-            <td>{{ customer.msql_id }}</td>
+            <td>{{ customer.market }}</td>
             <td>{{ customer.account_number }}</td>
-            <td>{{ customer.fname }}</td>
-            <td>{{ customer.lname }}</td>
-            <td>{{ customer.email }}</td>
-            <td>{{ customer.current_farm_id}}</td>
+            <td>{{ customer.first_name }}</td>
+            <td>{{ customer.last_name }}</td>
+            <td>{{ customer.customer_id }}</td>
 
         </tr>
         {% empty %}

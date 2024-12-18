@@ -7,6 +7,17 @@
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
 
+class Treatables(models.Model):
+    # Define fields matching the columns in your view
+    market = models.CharField(db_column='market',max_length=255)
+    customer_id = models.IntegerField(db_column='customer_id', primary_key=True)
+    first_name = models.CharField(db_column='first_name', max_length=255)  # Field name made lowercase.
+    last_name = models.CharField(db_column='last_name', max_length=255)  # Field name made lowercase.
+    account_number = models.CharField(db_column='account_number', max_length=255)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    class Meta:
+        managed = False
+        db_table = 'treatables'  # Replace with the actual name of your view
+
 class Cep(models.Model):
     msql_id = models.AutoField(db_column='MSQL_ID', primary_key=True)  # Field name made lowercase.
     cep_code = models.CharField(db_column='CEP_code', max_length=80)  # Field name made lowercase.
