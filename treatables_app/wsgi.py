@@ -1,5 +1,5 @@
 """
-WSGI config for python_mysql_test_project project.
+WSGI config for treatables_app project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'python_mysql_test_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'treatables_app.settings')
 
 application = get_wsgi_application()
