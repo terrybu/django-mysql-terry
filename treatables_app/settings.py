@@ -15,6 +15,8 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+#ALLOWED_HOSTS = ['yourdomain.com', 'www.yourdomain.com', '127.0.0.1', 'localhost','syn-067-150-009-047.res.spectrum.com']
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -40,9 +42,6 @@ LOGGING = {
     },
 }
 
-ALLOWED_HOSTS = []
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -52,7 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app1'
+    'view_treatables',
+    'edit_treatables'
 ]
 
 MIDDLEWARE = [
@@ -90,14 +90,26 @@ WSGI_APPLICATION = 'treatables_app.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
+    #this is our production database below 
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'solomon_production',
+    #     'USER': 'tbu',
+    #     'PASSWORD': 'Z3i4h!KcsYVk',
+    #     'HOST': 'sfny-prod-staging-v8.cdwm6ltbtcc7.us-east-2.rds.amazonaws.com',    # Or the database server's IP address
+    #     'PORT': '3306',         # Default MySQL port
+    # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'solomon_production',
+        # 'USER': 'admin_scs_psv8',
+        # 'PASSWORD': 'bbbbb11111',
         'USER': 'tbu',
         'PASSWORD': 'Z3i4h!KcsYVk',
-        'HOST': 'sfny-prod-staging-v8.cdwm6ltbtcc7.us-east-2.rds.amazonaws.com',    # Or the database server's IP address
+        'HOST': 'treatables-app-test-env-db.cdwm6ltbtcc7.us-east-2.rds.amazonaws.com',    # Or the database server's IP address
         'PORT': '3306',         # Default MySQL port
     }
+
 }
 
 

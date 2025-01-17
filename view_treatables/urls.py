@@ -19,7 +19,5 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('treatables/view', include('view_treatables.urls')),  # Include the URLs of `treatables_view`
-    path('treatables/edit', include('edit_treatables.urls'))  # Include the URLs of `treatables_view`
+    path('', views.index, name='index')
 ]
